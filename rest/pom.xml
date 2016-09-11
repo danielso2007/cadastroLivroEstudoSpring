@@ -14,7 +14,8 @@
     <packaging>war</packaging>
 
     <properties>
-
+        <context.path>/cl</context.path>
+        <application.context>/rest</application.context>
     </properties>
 
     <dependencies>
@@ -35,6 +36,24 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>${tomcat7-maven-plugin.version}</version>
+                <configuration>
+                    <path>${context.path}</path>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>${jetty-maven-plugin.version}</version>
+                <configuration>
+                    <webApp>
+                        <contextPath>${context.path}${application.context}</contextPath>
+                    </webApp>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>

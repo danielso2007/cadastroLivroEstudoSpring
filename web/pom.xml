@@ -41,6 +41,12 @@
     <build>
         <plugins>
             <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <overwrite>true</overwrite>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>${tomcat7-maven-plugin.version}</version>
@@ -53,8 +59,10 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>${jetty-maven-plugin.version}</version>
                 <configuration>
+                    <dumpOnStart>false</dumpOnStart>
                     <webApp>
                         <contextPath>${context.path}</contextPath>
+                        <baseAppFirst>false</baseAppFirst>
                     </webApp>
                 </configuration>
             </plugin>
@@ -63,15 +71,20 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>${maven-war-plugin.version}</version>
                 <configuration>
-                    <!-- <warSourceExcludes>source/**</warSourceExcludes> -->
+                    <warSourceExcludes>source/**</warSourceExcludes>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                     <overlays>
                         <overlay>
+                        </overlay>
+                        <overlay>
                             <groupId>br.com.cl</groupId>
                             <artifactId>rest</artifactId>
-                            <!--<excludes>-->
-                                <!--<exclude>WEB-INF/classes/applicationContext.xml</exclude>-->
-                            <!--</excludes>-->
+                            <excludes>
+                                <exclude>WEB-INF/classes/applicationContext.xml</exclude>
+                                <exclude>WEB-INF/classes/applicationContext-rest.xml</exclude>
+                            </excludes>
+                        </overlay>
+                        <overlay>
                         </overlay>
                     </overlays>
                 </configuration>
