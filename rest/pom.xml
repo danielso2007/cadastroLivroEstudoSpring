@@ -19,6 +19,11 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-servlets</artifactId>
+            <scope>runtime</scope>
+        </dependency>
         <!-- Spring -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -49,9 +54,14 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>${jetty-maven-plugin.version}</version>
                 <configuration>
+                    <dumpOnStart>false</dumpOnStart>
                     <webApp>
-                        <contextPath>${context.path}${application.context}</contextPath>
+                        <contextPath>${context.path}</contextPath>
+                        <baseAppFirst>false</baseAppFirst>
                     </webApp>
+                    <reload>manual</reload>
+                    <stopKey></stopKey>
+                    <stopPort></stopPort>
                 </configuration>
             </plugin>
             <plugin>
@@ -60,6 +70,7 @@
                 <version>${maven-surefire-plugin.version}</version>
                 <configuration>
                     <skipTests>true</skipTests>
+                    <workingDirectory>${project.build.directory}</workingDirectory>
                 </configuration>
             </plugin>
         </plugins>
