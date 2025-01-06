@@ -1,0 +1,156 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Cadastro de Livros                                                 [pom]
+[INFO] Rest                                                               [war]
+[INFO] Web                                                                [war]
+[INFO] service.client                                                     [jar]
+[INFO] service                                                            [jar]
+[INFO] domain                                                             [jar]
+[INFO] 
+[INFO] --------------------------< br.com.cl:parent >--------------------------
+[INFO] Building Cadastro de Livros 0.0.0-SNAPSHOT                         [1/6]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ parent ---
+[INFO] 
+[INFO] ---------------------------< br.com.cl:rest >---------------------------
+[INFO] Building Rest 0.0.0-SNAPSHOT                                       [2/6]
+[INFO]   from rest/pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ rest ---
+[INFO] 
+[INFO] --- resources:3.0.1:resources (default-resources) @ rest ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- compiler:3.6.2:compile (default-compile) @ rest ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /ramdisk/code/rest/target/classes
+[INFO] 
+[INFO] --- resources:3.0.1:testResources (default-testResources) @ rest ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /ramdisk/code/rest/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.6.2:testCompile (default-testCompile) @ rest ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:2.19.1:test (default-test) @ rest ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] ---------------------------< br.com.cl:web >----------------------------
+[INFO] Building Web 0.0.0-SNAPSHOT                                        [3/6]
+[INFO]   from web/pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ web ---
+[INFO] 
+[INFO] --- resources:3.0.1:resources (default-resources) @ web ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- compiler:3.6.2:compile (default-compile) @ web ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.0.1:testResources (default-testResources) @ web ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /ramdisk/code/web/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.6.2:testCompile (default-testCompile) @ web ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:2.19.1:test (default-test) @ web ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] ----------------------< br.com.cl:service.client >----------------------
+[INFO] Building service.client 0.0.0-SNAPSHOT                             [4/6]
+[INFO]   from service.client/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ service.client ---
+[INFO] 
+[INFO] --- resources:3.0.1:resources (default-resources) @ service.client ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /ramdisk/code/service.client/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.6.2:compile (default-compile) @ service.client ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /ramdisk/code/service.client/target/classes
+[INFO] 
+[INFO] --- resources:3.0.1:testResources (default-testResources) @ service.client ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /ramdisk/code/service.client/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.6.2:testCompile (default-testCompile) @ service.client ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ service.client ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] -------------------------< br.com.cl:service >--------------------------
+[INFO] Building service 0.0.0-SNAPSHOT                                    [5/6]
+[INFO]   from service/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ service ---
+[INFO] 
+[INFO] --- resources:3.0.1:resources (default-resources) @ service ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /ramdisk/code/service/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.6.2:compile (default-compile) @ service ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /ramdisk/code/service/target/classes
+[INFO] 
+[INFO] --- resources:3.0.1:testResources (default-testResources) @ service ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /ramdisk/code/service/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.6.2:testCompile (default-testCompile) @ service ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ service ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --------------------------< br.com.cl:domain >--------------------------
+[INFO] Building domain 0.0.0-SNAPSHOT                                     [6/6]
+[INFO]   from domain/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ domain ---
+[INFO] 
+[INFO] --- resources:3.0.1:resources (default-resources) @ domain ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /ramdisk/code/domain/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.6.2:compile (default-compile) @ domain ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 5 source files to /ramdisk/code/domain/target/classes
+[INFO] 
+[INFO] --- resources:3.0.1:testResources (default-testResources) @ domain ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /ramdisk/code/domain/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.6.2:testCompile (default-testCompile) @ domain ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ domain ---
+[INFO] No tests to run.
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Cadastro de Livros 0.0.0-SNAPSHOT:
+[INFO] 
+[INFO] Cadastro de Livros ................................. SUCCESS [  0.119 s]
+[INFO] Rest ............................................... SUCCESS [  1.512 s]
+[INFO] Web ................................................ SUCCESS [  0.017 s]
+[INFO] service.client ..................................... SUCCESS [  0.376 s]
+[INFO] service ............................................ SUCCESS [  0.071 s]
+[INFO] domain ............................................. SUCCESS [  0.133 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.333 s
+[INFO] Finished at: 2025-01-06T23:15:27Z
+[INFO] ------------------------------------------------------------------------
